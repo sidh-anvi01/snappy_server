@@ -1,0 +1,881 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="SnapPy Terms of Service and Privacy Notice.">
+  <title>Terms &amp; Policies | SnapPy</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --page: #090c18;
+      --surface: #121625;
+      --surface-raised: #191e2e;
+      --border: #282e40;
+      --text: #f4f5fb;
+      --muted: #a7afc4;
+      --accent: #d64bea;
+      --accent-soft: #251a35;
+      --link: #e49cf2;
+      --danger: #ff7188;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 32px;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 80% -10%, #30203f 0, transparent 36rem),
+        var(--page);
+      color: var(--text);
+      font-family:
+        Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: #f1c4f7;
+    }
+
+    .page-shell {
+      width: min(100% - 40px, 1040px);
+      margin-inline: auto;
+    }
+
+    .topbar {
+      display: flex;
+      min-height: 76px;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgb(255 255 255 / 7%);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--text);
+      font-size: 19px;
+      font-weight: 750;
+      letter-spacing: -0.04em;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      border-radius: 12px;
+      background: linear-gradient(145deg, #e34be1, #7834a5);
+      box-shadow: 0 5px 22px rgb(201 60 222 / 24%);
+      color: #fff;
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .topbar-note {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .hero {
+      padding: 78px 0 52px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 18px;
+      color: #e49cf2;
+      font-size: 12px;
+      font-weight: 750;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 14px var(--accent);
+      content: "";
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin-bottom: 20px;
+      font-size: clamp(40px, 7vw, 68px);
+      line-height: 1.06;
+      letter-spacing: -0.055em;
+    }
+
+    .hero-copy {
+      max-width: 690px;
+      margin-bottom: 25px;
+      color: var(--muted);
+      font-size: clamp(17px, 2.5vw, 20px);
+      line-height: 1.65;
+    }
+
+    .updated {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 4px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgb(18 22 37 / 75%);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .notice {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 15px;
+      align-items: start;
+      margin: 0 0 38px;
+      padding: 20px;
+      border: 1px solid #49334d;
+      border-radius: 18px;
+      background: linear-gradient(115deg, #21172c, #151827 75%);
+    }
+
+    .notice-icon {
+      display: grid;
+      width: 40px;
+      height: 40px;
+      place-items: center;
+      border-radius: 14px;
+      background: var(--accent-soft);
+      color: #e49cf2;
+      font-size: 20px;
+    }
+
+    .notice strong {
+      display: block;
+      margin-bottom: 3px;
+      font-size: 14px;
+    }
+
+    .notice p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .contents {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 58px;
+    }
+
+    .contents a {
+      display: flex;
+      min-height: 76px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 17px 19px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: rgb(18 22 37 / 86%);
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 650;
+      text-decoration: none;
+      transition:
+        border-color 160ms ease,
+        transform 160ms ease,
+        background 160ms ease;
+    }
+
+    .contents a:hover {
+      transform: translateY(-2px);
+      border-color: #754282;
+      background: #171a2b;
+    }
+
+    .contents span {
+      color: var(--accent);
+      font-size: 19px;
+    }
+
+    .legal-section {
+      margin: 0 0 22px;
+      padding: clamp(22px, 5vw, 38px);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background: linear-gradient(145deg, rgb(18 22 37 / 96%), #101321);
+    }
+
+    .section-kicker {
+      margin-bottom: 8px;
+      color: #d889e8;
+      font-size: 11px;
+      font-weight: 750;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin-bottom: 14px;
+      font-size: clamp(25px, 4vw, 34px);
+      line-height: 1.2;
+      letter-spacing: -0.035em;
+    }
+
+    .section-intro {
+      margin-bottom: 25px;
+      color: var(--muted);
+    }
+
+    h3 {
+      margin: 25px 0 7px;
+      font-size: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .legal-section p,
+    .legal-section li {
+      color: #bdc3d3;
+      font-size: 14px;
+    }
+
+    .legal-section p {
+      margin-bottom: 12px;
+    }
+
+    .legal-section ul {
+      margin: 8px 0 18px;
+      padding-left: 21px;
+    }
+
+    .legal-section li {
+      margin: 6px 0;
+      padding-left: 3px;
+    }
+
+    .callout {
+      margin: 18px 0;
+      padding: 15px 17px;
+      border-left: 3px solid var(--accent);
+      border-radius: 0 12px 12px 0;
+      background: var(--accent-soft);
+      color: #e5d6ea;
+      font-size: 13px;
+    }
+
+    .privacy-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 18px 0 24px;
+    }
+
+    .privacy-card {
+      padding: 17px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: var(--surface-raised);
+    }
+
+    .privacy-card strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--text);
+      font-size: 13px;
+    }
+
+    .privacy-card p {
+      margin: 0;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .contact-card {
+      margin-top: 22px;
+      padding: 18px;
+      border: 1px solid #49334d;
+      border-radius: 15px;
+      background: #171526;
+    }
+
+    .contact-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 13px;
+    }
+
+    footer {
+      display: flex;
+      min-height: 90px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    footer a {
+      text-decoration: none;
+    }
+
+    @media (max-width: 640px) {
+      .page-shell {
+        width: min(100% - 30px, 1040px);
+      }
+
+      .topbar {
+        min-height: 64px;
+      }
+
+      .topbar-note {
+        font-size: 11px;
+      }
+
+      .hero {
+        padding: 55px 0 34px;
+      }
+
+      .notice {
+        grid-template-columns: 34px 1fr;
+        gap: 12px;
+        padding: 16px;
+      }
+
+      .notice-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 12px;
+      }
+
+      .contents {
+        gap: 10px;
+        margin-bottom: 38px;
+      }
+
+      .contents a {
+        min-height: 68px;
+        padding: 13px;
+        font-size: 12px;
+      }
+
+      .legal-section {
+        margin-bottom: 15px;
+        border-radius: 18px;
+      }
+
+      .privacy-grid {
+        grid-template-columns: 1fr;
+      }
+
+      footer {
+        min-height: 74px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    :root {
+      color-scheme: light;
+      --page: #ffffff;
+      --surface: #ffffff;
+      --surface-raised: #f8f9fb;
+      --border: #e5e7eb;
+      --text: #202124;
+      --muted: #737780;
+      --accent: #7651c8;
+      --accent-soft: #f2effb;
+      --link: #385898;
+    }
+
+    body {
+      background: #fff;
+      color: #202124;
+      font-family:
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+        Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .page-shell {
+      width: min(100% - 40px, 900px);
+    }
+
+    .topbar {
+      min-height: 68px;
+      border-bottom-color: #e5e7eb;
+    }
+
+    .brand {
+      color: #202124;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .brand-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      background: linear-gradient(145deg, #8c58d6, #5b68c7);
+      box-shadow: none;
+    }
+
+    .topbar-note {
+      color: #737780;
+    }
+
+    .hero {
+      padding: 54px 0 34px;
+    }
+
+    .eyebrow {
+      color: #7651c8;
+      letter-spacing: 0.09em;
+    }
+
+    .eyebrow::before {
+      background: #7651c8;
+      box-shadow: none;
+    }
+
+    h1 {
+      max-width: 700px;
+      margin-bottom: 14px;
+      font-size: clamp(34px, 5vw, 48px);
+      line-height: 1.15;
+      letter-spacing: -0.04em;
+    }
+
+    .hero-copy {
+      max-width: 680px;
+      color: #626873;
+      font-size: 17px;
+    }
+
+    .updated {
+      min-height: 30px;
+      border-color: #e5e7eb;
+      background: #f8f9fb;
+      color: #626873;
+    }
+
+    .notice {
+      margin-bottom: 30px;
+      border-color: #e4e0f1;
+      border-radius: 12px;
+      background: #f8f7fc;
+    }
+
+    .notice-icon {
+      border-radius: 50%;
+      background: #eee9fa;
+      color: #7651c8;
+    }
+
+    .notice p {
+      color: #626873;
+    }
+
+    .contents {
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+
+    .contents a {
+      min-height: 62px;
+      padding: 14px 17px;
+      border-radius: 10px;
+      background: #fff;
+      color: #30343b;
+    }
+
+    .contents a:hover {
+      transform: none;
+      border-color: #c9bee9;
+      background: #fbfaff;
+    }
+
+    .contents span,
+    .section-kicker {
+      color: #7651c8;
+    }
+
+    .legal-section {
+      margin-bottom: 18px;
+      padding: clamp(22px, 5vw, 34px);
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    h2 {
+      font-size: clamp(25px, 4vw, 30px);
+      letter-spacing: -0.025em;
+    }
+
+    .section-intro {
+      color: #626873;
+    }
+
+    h3 {
+      margin-top: 22px;
+      color: #282b31;
+      font-size: 15px;
+    }
+
+    .legal-section p,
+    .legal-section li {
+      color: #555b65;
+      font-size: 14px;
+    }
+
+    .callout {
+      border-left-color: #7651c8;
+      border-radius: 4px 10px 10px 4px;
+      background: #f5f2fb;
+      color: #45404f;
+    }
+
+    .privacy-card {
+      border-radius: 10px;
+      background: #f8f9fb;
+    }
+
+    .privacy-card strong {
+      color: #30343b;
+    }
+
+    .privacy-card p {
+      color: #626873;
+    }
+
+    .contact-card {
+      border-color: #e4e0f1;
+      border-radius: 10px;
+      background: #f8f7fc;
+    }
+
+    .back-to-top,
+    a {
+      color: #385898;
+    }
+
+    a:hover {
+      color: #7651c8;
+    }
+
+    footer {
+      color: #737780;
+    }
+
+    @media (max-width: 640px) {
+      .page-shell {
+        width: min(100% - 32px, 900px);
+      }
+
+      .hero {
+        padding: 40px 0 28px;
+      }
+
+      .legal-section {
+        padding: 22px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body id="top">
+  <header class="topbar page-shell">
+    <a class="brand" href="#top" aria-label="SnapPy home">
+      <span class="brand-mark" aria-hidden="true">S</span>
+      <span>SnapPy</span>
+    </a>
+    <span class="topbar-note">Terms &amp; policies</span>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">Clear, simple, transparent</p>
+      <h1 id="page-title">Your conversations.<br>Our commitments.</h1>
+      <p class="hero-copy">
+        These terms explain how SnapPy works, what you can expect from the
+        service, and how information is handled when you use it.
+      </p>
+      <span class="updated">Last updated: October 17, 2026</span>
+    </section>
+
+    <aside class="notice" aria-label="Service status notice">
+      <span class="notice-icon" aria-hidden="true">i</span>
+      <div>
+        <strong>A note about this SnapPy build</strong>
+        <p>
+          SnapPy is currently a prototype. Features, availability, data
+          controls, and the server operator may vary by deployment. Do not
+          use this build for emergencies or information that requires
+          guaranteed confidentiality or availability.
+        </p>
+      </div>
+    </aside>
+
+    <nav class="contents" aria-label="Page contents">
+      <a href="#terms">Terms of Service <span aria-hidden="true">↘</span></a>
+      <a href="#privacy">Privacy Notice <span aria-hidden="true">↘</span></a>
+    </nav>
+
+    <article class="legal-section" id="terms">
+      <p class="section-kicker">The agreement</p>
+      <h2>Terms of Service</h2>
+      <p class="section-intro">
+        By creating an account or using SnapPy, you agree to these terms. If
+        you do not agree, please stop using the service.
+      </p>
+
+      <h3>1. Who may use SnapPy</h3>
+      <p>
+        You must be legally able to agree to these terms where you live. If
+        you are not, use SnapPy only with any permission and supervision
+        required by applicable law. You are responsible for the activity
+        carried out through your account.
+      </p>
+
+      <h3>2. Your account</h3>
+      <p>
+        Provide accurate registration details, keep your sign-in credentials
+        private, and tell the operator of your SnapPy instance if you believe
+        your account has been accessed without permission. Do not share
+        authentication tokens or attempt to access another person's account.
+      </p>
+
+      <h3>3. Messages, media, statuses, and calls</h3>
+      <p>
+        You retain your rights to the content you submit. You give the
+        operator of the SnapPy instance a limited permission to host,
+        process, transmit, and display that content only as needed to provide,
+        protect, and maintain the service. Your content may be shown to the
+        people you message or otherwise share it with.
+      </p>
+      <p>
+        Status photos are designed to expire from the active status feed
+        after 24 hours. Cleanup from storage may not happen at that exact
+        moment. Messages and shared media may remain stored until removed by
+        the service operator or as otherwise explained by the operator of
+        your instance.
+      </p>
+
+      <h3>4. Use the service responsibly</h3>
+      <p>You agree not to:</p>
+      <ul>
+        <li>use SnapPy to threaten, harass, defraud, or unlawfully harm others;</li>
+        <li>share content you do not have permission or legal rights to share;</li>
+        <li>upload malicious code, disrupt the service, or bypass its safeguards;</li>
+        <li>scrape accounts or content, or probe systems without authorization;</li>
+        <li>use the service in a way that violates applicable law.</li>
+      </ul>
+
+      <h3>5. Availability and changes</h3>
+      <p>
+        SnapPy is provided as-is while it is a prototype. Features may change,
+        become unavailable, or be discontinued. We do not promise uninterrupted
+        service, delivery of every message, or preservation of content. Nothing
+        in these terms limits rights that cannot legally be limited.
+      </p>
+
+      <h3>6. Suspension or termination</h3>
+      <p>
+        The instance operator may restrict or end access where reasonably
+        necessary to protect people, comply with law, respond to misuse, or
+        maintain the service. You may stop using SnapPy at any time. Account
+        and data deletion depends on the controls and processes available on
+        your particular instance.
+      </p>
+
+      <h3>7. Liability</h3>
+      <p>
+        To the extent permitted by law, the service is not responsible for
+        indirect or consequential losses arising from a prototype service.
+        These terms do not exclude liability that applicable law says cannot
+        be excluded.
+      </p>
+
+      <h3>8. Updates to these terms</h3>
+      <p>
+        Terms may be revised as SnapPy changes. The date at the top of this
+        page shows when this version was last updated. Continued use after a
+        revised version is published means the revised terms apply, where
+        permitted by law.
+      </p>
+
+      <a class="back-to-top" href="#top">Back to top ↑</a>
+    </article>
+
+    <article class="legal-section" id="privacy">
+      <p class="section-kicker">Your information</p>
+      <h2>Privacy Notice</h2>
+      <p class="section-intro">
+        This notice describes the information the current SnapPy app is built
+        to process. The person or organization operating your server is
+        responsible for its deployment, access, and retention practices.
+      </p>
+
+      <h3>Information the app handles</h3>
+      <div class="privacy-grid">
+        <div class="privacy-card">
+          <strong>Account and profile</strong>
+          <p>
+            Name, email address, username, gender supplied at registration,
+            profile photo, and About text.
+          </p>
+        </div>
+        <div class="privacy-card">
+          <strong>Conversations and media</strong>
+          <p>
+            Messages, shared image or audio media, sender and recipient,
+            timestamps, and read status.
+          </p>
+        </div>
+        <div class="privacy-card">
+          <strong>Status updates</strong>
+          <p>
+            Status images, their owner, and creation and expiry times. Status
+            images are intended to leave the active feed after 24 hours.
+          </p>
+        </div>
+        <div class="privacy-card">
+          <strong>Calls and device connections</strong>
+          <p>
+            Call setup and connection information needed to establish
+            app-supported calls. This notice does not promise that calls are
+            recorded or that they are end-to-end encrypted.
+          </p>
+        </div>
+      </div>
+
+      <h3>How information is used</h3>
+      <ul>
+        <li>to create accounts, authenticate users, and maintain profiles;</li>
+        <li>to deliver messages, media, status updates, and call setup;</li>
+        <li>to show account and status information to signed-in users of the instance;</li>
+        <li>to protect, troubleshoot, and maintain the service;</li>
+        <li>to meet legal obligations and respond to valid legal requests.</li>
+      </ul>
+
+      <h3>Who may receive information</h3>
+      <p>
+        Information is available to the people you communicate or share with,
+        as needed for the feature. The server operator and its hosting or
+        infrastructure providers may process information to run the service.
+        Information may also be disclosed where required by law or needed to
+        address abuse, security incidents, or the protection of users.
+      </p>
+
+      <h3>Storage, security, and encryption</h3>
+      <p>
+        Account and communication data are processed by the server that hosts
+        your SnapPy instance. Passwords are designed to be stored as hashes,
+        not as readable passwords. The operator should use secure transport
+        (HTTPS/TLS) and appropriate access controls in production; protection
+        depends on the actual deployment.
+      </p>
+      <div class="callout">
+        SnapPy does not currently promise end-to-end encryption. Do not treat
+        messages, media, or calls as private from the server operator, and do
+        not share sensitive information unless you trust the operator and
+        have verified the deployment's security.
+      </div>
+
+      <h3>Retention and your choices</h3>
+      <p>
+        You can edit your name, profile photo, and About text in the app.
+        Status updates are configured to expire from the active feed after
+        24 hours; message and account retention depends on the instance
+        operator. Ask that operator about access, correction, export, or
+        deletion of your information.
+      </p>
+      <p>
+        The current prototype may not provide a working server-side
+        self-service account deletion flow. If the in-app delete option does
+        not complete successfully, contact the person or organization that
+        operates your SnapPy instance before relying on deletion.
+      </p>
+
+      <h3>Children's privacy</h3>
+      <p>
+        SnapPy is not designed for children who are too young to use an
+        online communication service under the laws that apply to them. The
+        instance operator should provide appropriate age and consent
+        processes before offering the service to children.
+      </p>
+
+      <h3>Changes to this notice</h3>
+      <p>
+        This notice may be updated when the app or its data practices change.
+        A materially different deployment may need an additional notice from
+        its operator. Check the date at the top of this page for the current
+        version.
+      </p>
+
+      <div class="contact-card">
+        <h3>Questions or privacy requests?</h3>
+        <p>
+          Contact the person or organization that provided or operates the
+          SnapPy server you use. Each deployment must publish its own
+          responsible operator and contact details before being offered
+          publicly; this prototype does not define a universal support
+          address.
+        </p>
+      </div>
+
+      <a class="back-to-top" href="#top">Back to top ↑</a>
+    </article>
+  </main>
+
+  <footer class="page-shell">
+    <span>SnapPy · Terms &amp; Privacy</span>
+    <a href="#top">Return to top ↑</a>
+  </footer>
+</body>
+
+</html>

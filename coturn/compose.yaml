@@ -1,0 +1,21 @@
+services:
+  coturn:
+    image: coturn/coturn:4.18.0
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      DETECT_EXTERNAL_IP: "yes"
+    command:
+      - -n
+      - --log-file=stdout
+      - --listening-port=3478
+      - --min-port=49160
+      - --max-port=49200
+      - --realm=${TURN_REALM:?Set TURN_REALM in backend .env}
+      - --use-auth-secret
+      - --static-auth-secret=${TURN_SECRET:?Set TURN_SECRET in backend .env}
+      - --fingerprint
+      - --no-multicast-peers
+      - --no-cli
+      - --no-tls
+      - --no-dtls
