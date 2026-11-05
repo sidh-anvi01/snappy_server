@@ -85,6 +85,8 @@ io.on("connection", (socket) => {
       callerId: userId,
       receiverId: targetId,
       status: "ringing",
+      callerCandidates: [],
+      receiverCandidates: [],
       timeout: null,
     };
     call.timeout = setTimeout(() => {
@@ -122,6 +124,40 @@ io.on("connection", (socket) => {
     call.status = "connected";
     io.to(call.callerId).emit("callAnswered", { callId, signal });
     io.to(call.receiverId).emit("callAccepted", { callId });
+    for (const candidate of call.callerCandidates) {
+      io.to(call.receiverId).emit("iceCandidate", { callId, candidate });
+    }
+    for (const candidate of call.receiverCandidates) {
+      io.to(call.callerId).emit("iceCandidate", { callId, candidate });
+    }
+    call.callerCandidates.length = 0;
+    call.receiverCandidates.length = 0;
+  });
+
+  socket.on("iceCandidate", (payload = {}) => {
+    const callId = payload?.callId;
+    const candidate = payload?.candidate;
+    const call = calls.get(callId);
+    if (
+      !call ||
+      (call.callerId !== userId && call.receiverId !== userId) ||
+      typeof candidate?.candidate !== "string"
+    ) {
+      return;
+    }
+    if (call.status === "ringing") {
+      const candidates =
+        call.callerId === userId
+          ? call.callerCandidates
+          : call.receiverCandidates;
+      if (candidates.length < 100) {
+        candidates.push(candidate);
+      }
+      return;
+    }
+    const recipientId =
+      call.callerId === userId ? call.receiverId : call.callerId;
+    io.to(recipientId).emit("iceCandidate", { callId, candidate });
   });
 
   socket.on("rejectCall", (payload = {}) => {

@@ -1,6 +1,6 @@
 import { createHmac } from "node:crypto";
 
-const TURN_CREDENTIAL_LIFETIME_SECONDS = 60 * 60;
+const TURN_CREDENTIAL_LIFETIME_SECONDS = 3600;
 const STUN_SERVERS = [{ urls: "stun:stun.l.google.com:19302" }];
 
 export const getIceServers = (req, res) => {
